@@ -1,0 +1,47 @@
+.preview
+  height: 480px
+  &__bg
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.promo
+  margin-top: -90px 
+  &__wrap
+    display: flex
+    gap: 30px
+    align-items: stretch
+    justify-content: flex-end
+  &__info
+    flex: 0 0 380px
+  &__img
+    flex: 0 1 482px
+    img
+        height: 100%
+        object-fit: cover
+
+.features
+  &_direction_reverse
+    padding-top: 60px
+  &__wrap
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    gap: 132px
+    padding-left: 100px
+  &__name
+    font-family: $arina
+    font-size: 70px
+    line-height: 100%
+    max-width: 278px
+    text-align: center
+    margin-left: -100px
+    margin-top: -40px 
+    position: relative
+    &_position_bottom
+      margin-top: 0
+      margin-bottom: -37px
+  &__img
+      img
+          width: 100%
+          object-fit: cover
+
