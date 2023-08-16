@@ -10,5 +10,17 @@ window.addEventListener("DOMContentLoaded", () => {
       disableOnInteraction: false,
     },
     parallax: true,
+    breakpoints: {
+      576: {},
+      768: {},
+      1024: {},
+      1920: {
+        spaceBetween: 50,
+        slidesPerView: 3,
+        autoplay: {
+          delay: 4000,
+        },
+      },
+    },
   });
 });
