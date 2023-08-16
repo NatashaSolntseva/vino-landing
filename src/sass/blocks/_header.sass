@@ -1,10 +1,21 @@
 .header
     padding: 51px 0
+    @include xxs
+        padding: 40px 0
     &__wrap
         display: flex
         justify-content: center
     &__logo
-        height: 56px
+        height: 56px         
+        @include xxs
+            display: none     
         img
             max-height: 100%
             object-fit: contain
+        &_type_mobile
+            display: none
+            @include xxs
+                display: block       
+                height: 30px
+                width: 290px     
+

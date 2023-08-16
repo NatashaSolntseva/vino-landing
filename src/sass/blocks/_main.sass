@@ -6,12 +6,23 @@
     object-fit: cover
 
 .promo
-  margin-top: -90px 
+  margin-top: -90px
+  @include sm
+      margin-top: -70px
+  @include xxs
+      margin-top: -42px
   &__wrap
     display: flex
     gap: 30px
     align-items: stretch
     justify-content: flex-end
+    @include sm
+        max-width: 444px
+        flex-direction: column
+        gap: 100px 
+        margin-left: auto        
+    @include xxs
+        gap: 70px        
   &__info
     flex: 0 0 380px
   &__img
@@ -20,14 +31,44 @@
         height: 100%
         object-fit: cover
 
-.features
-  &_direction_reverse
-    padding-top: 60px
+.features     
   &__wrap
     display: grid
     grid-template-columns: repeat(3,1fr)
     gap: 132px
     padding-left: 100px
+    @include sm
+        grid-template-columns: repeat(2,1fr)
+        grid-template-rows: repeat(3,1fr)
+        column-gap: 0px
+        row-gap: 100px        
+    @include xxs
+        grid-template-columns: 1fr
+        grid-template-rows: none 
+        gap: 70px
+        padding-left: 0px
+        width: 62%
+        margin: 0 auto
+  &__item
+    @include sm
+      grid-column: 1/2
+    @include xxs
+        grid-column: auto
+        display: flex
+        flex-direction: column-reverse
+    &_direction_reverse
+        padding-top: 60px
+        @include sm
+          grid-column: 2/3
+          grid-row: 2/3
+          padding-top: 0
+        @include xxs
+            grid-column: auto            
+            flex-direction: column
+    &_position_grid                      
+      @include sm        
+        grid-row: 3/4        
+  
   &__name
     font-family: $arina
     font-size: 70px
@@ -37,9 +78,18 @@
     margin-left: -100px
     margin-top: -40px 
     position: relative
+    @include sm
+        margin-left: -73px         
+    @include xxs
+        font-size: 32px
+        margin-left: 0px
+        margin-top: 0px
+        margin-bottom: -13px 
     &_position_bottom
       margin-top: 0
       margin-bottom: -37px
+      @include xxs
+        margin-bottom: -13px 
   &__img
       img
           width: 100%
@@ -48,10 +98,19 @@
 .tradition
   background-color: $main-color
   padding-bottom: 342px
+  @include xxs
+    padding-bottom: 140px
   &__wrap
     display: flex
     justify-content: space-between
-    align-items: flex-start    
+    align-items: flex-start  
+    @media(max-width: 1350px)
+      flex-direction: column  
+    @include sm
+      flex-direction: column
+    @include xxs
+      flex-direction: column 
+      gap: 70px
   &__left
     display: flex
     flex-direction: column    
@@ -62,14 +121,21 @@
       padding-left: 20px
     @include xxs
       padding-left: 15px
+      margin-right: 0px
   &__left-content
-    width: 688px    
+    width: 688px
+    @include xxs
+      width: 100%    
   &__text
     margin-left: auto
   &__right
     align-self: flex-end    
     @media(min-width: 1920px)
         margin-right: calc((100% - 1900px) / 2)
+    @include xxs
+        align-self: center
+        width: 90%
+        height: 435px             
   &__thumb
     position: absolute  
     right: 0
@@ -80,6 +146,12 @@
     @media(min-width: 1920px)
         width: 80%
         height: 640px
+    @media(max-width: 1350px)
+      display: none   
+    @include sm
+        display: none    
+    @include xxs
+      display: none    
     img
       width: 100%
       height: 100%
@@ -89,22 +161,48 @@
   padding-top: 510px
   @media(min-width: 1920px)
     padding-top: 610px
+  @include xxs
+    padding-top: 200px  
   &__title
     position: relative
   &__wrap
     display: flex
     gap: 30px
+    @include sm
+      flex-direction: column
+      gap: 100px
+    @include xxs      
+      gap: 70px
   &__left
     display: flex
     flex-direction: column
     flex: 0 0 688px
+    @include sm
+      flex: 1 1 auto
+    @include xxs
+        flex: 1 1 auto
   &__right
     align-self: flex-end
     padding-top: 370px
+    @include sm
+      padding-top: 0
+    @include xxs
+      padding-top: 0
   &__img
     width: 55%
     margin-left: auto
     margin-top: -300px
+    @include sm
+        width: 70%
+        margin: 0 auto
+        margin-top: -300px
+    @include xxs
+        width: 100%
+        margin-top: -145px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover    
 
 .story
   background-color: $main-color

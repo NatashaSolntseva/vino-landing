@@ -90,6 +90,8 @@ a
     line-height: 100%
     &_width_narrow
         max-width: 688px
+        @include sm
+            max-width: 100%   
     &_color_bright
         color: $bright-color    
     // @include md
@@ -111,21 +113,31 @@ a
     &_color_dark
         color: $dark-color     
     &_width_narrow
-        max-width: 380px    
+        max-width: 380px
+ 
 .mb-120 
-    margin-bottom: 120px            
+    margin-bottom: 120px
+    @include sm
+        margin-bottom: 100px
+    @include xxs
+        margin-bottom: 70px            
 
 .pb-200
     padding-bottom: 200px
+    @include xxs
+        padding-bottom: 140px
 
 .pt-200
     padding-top: 200px
-
+    @include xxs
+        padding-top: 174px
 
 .footer-text 
     font-size: 18px
     color: $main-color
     font-style: normal
+    @include xxs
+        font-size: 17px
 
 
 

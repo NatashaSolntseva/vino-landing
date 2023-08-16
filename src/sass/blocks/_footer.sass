@@ -1,16 +1,36 @@
 .footer
   padding-bottom: 48px
+  @include xxs
+    padding-bottom: 66px
   &__top
     display: flex
     gap: 60px
     align-items: flex-end
+    @include sm
+      flex-direction: column
+      gap: 70px
+      align-items: flex-start
+    @include xxs
+      flex-direction: column-reverse
+      gap: 50px
+      align-items: flex-start
   &__logo
     flex: 0 0 146px
+    @include xxs
+      flex: 0 0 100px
   &__bottom
     display: grid
     grid-template-columns: repeat(2, 300px)
     gap: 110px
     justify-content: flex-end
+    @include sm
+        grid-template-columns: 1fr
+        gap: 70px
+        padding-left: 304px
+    @include xxs
+        grid-template-columns: 1fr
+        gap: 70px
+        padding-left: 0px
   &__col
     display: flex
     flex-direction: column
@@ -19,6 +39,8 @@
     margin-bottom: 10px
   &__time
     margin-bottom: 60px
+    @include xxs
+        margin-bottom: 40px
   &__tel
     margin-bottom: 10px
   &__email
