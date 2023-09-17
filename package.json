@@ -30,8 +30,14 @@
     "sass": "^1.57.1"
   },
   "dependencies": {
+    "gh-pages": "^6.0.0",
+    "gift": "^0.10.2",
     "gulp-avif": "^1.0.1",
     "gulp-babel": "^8.0.0",
+    "gulp-gh-pages-will": "^0.5.5",
     "swiper": "^7.4.1"
+  },
+  "resolutions": {
+    "gift": "^0.10.2"
   }
 }
